@@ -28,13 +28,13 @@ export class NameCheckerComponent {
 		);
 	}
 
-	public handlePromiseResponse ( firstName: string ): void {
+	public setWelcomeMessage ( firstName: string ): void {
 		this.returnFullNamePromise( firstName )
 			.then(
-				( fullName: string ) => this.welcomeMessage = `Welcome ${ fullName }`
+				( fullName: string ) => this.welcomeMessage = `Welcome ${ fullName }!`
 			)
 			.catch(
-				( error: string ) => this.handleError( error )
+				( error: string ) => this.handleError()
 			);
 	}
 
@@ -53,7 +53,7 @@ export class NameCheckerComponent {
 		return await promise;
 	}
 
-	public handleError ( error ): void {
+	public handleError (): void {
 		// Do some error handling stuff
 	}
 
