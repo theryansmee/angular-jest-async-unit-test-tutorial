@@ -39,6 +39,7 @@ export class NotificationComponent implements OnInit, OnDestroy {
 	public stopMarkAsReadTimer (): void {
 		if ( this.markAsReadTimer ) {
 			clearTimeout( this.markAsReadTimer );
+			this.markAsReadTimer = undefined;
 		}
 	}
 }

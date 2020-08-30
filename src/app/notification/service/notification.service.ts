@@ -41,6 +41,7 @@ export class NotificationService implements OnDestroy {
 	public stopMarkAsReadInterval (): void {
 		if ( this.markAsReadInterval ) {
 			clearInterval( this.markAsReadInterval );
+			this.markAsReadInterval = undefined;
 		}
 	}
 
