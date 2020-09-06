@@ -1,27 +1,15 @@
-# AngularJestAsyncUnitTests
+# Testing Asynchronous Code with Jest
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.27.
+## Description
 
-## Development server
+This project contains the unit tests written in my youtube tutorials on.: 
+ - [Testing asynchronous code in Angular with Jest: Part 1 - Timers](https://youtu.be/nC_J6mmi3-I)
+ - Testing asynchronous code in Angular with Jest: Part 2 - Promises (Coming soon)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+_The `master` branch contains the code to be tested and the `with tests` branch contains the completed unit tests_
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+If you have any questions, leave a comment on the video or message me on [Twitter](https://twitter.com/theryansmee).
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Run `npm run test-watch` to execute the unit tests in watch mode via [Jest](https://jestjs.io/).
