@@ -28,18 +28,8 @@ export class NameCheckerComponent {
 		);
 	}
 
-	public setWelcomeMessage ( firstName: string ): void {
-		this.returnFullNamePromise( firstName )
-			.then(
-				( fullName: string ) => this.welcomeMessage = `Welcome ${ fullName }!`
-			)
-			.catch(
-				( error: string ) => this.handleError()
-			);
-	}
-
-	async returnFullNameAsyncAwaitPromise ( name: string ) {
-		const promise = new Promise(
+	async returnFullNameAsyncAwaitPromise ( name: string ): Promise<string> {
+		const promise: Promise<string> = new Promise(
 			( resolve, reject ) => {
 				if ( name === 'Ryan' ) {
 					resolve( 'Ryan Smee' );
@@ -53,8 +43,17 @@ export class NameCheckerComponent {
 		return await promise;
 	}
 
+	public setWelcomeMessage ( firstName: string ): void {
+		this.returnFullNamePromise( firstName )
+			.then(
+				( fullName: string ) => this.welcomeMessage = `Welcome ${ fullName }!`
+			)
+			.catch(
+				( error: string ) => this.handleError()
+			);
+	}
+
 	public handleError (): void {
 		// Do some error handling stuff
 	}
-
 }

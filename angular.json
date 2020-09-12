@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-jest-async-unit-tests"
+    }
+  },
+  "defaultProject": "angular-jest-async-unit-tests",
+  "cli": {
+    "analytics": false
+  }
 }
