@@ -17,7 +17,7 @@ export class BonusRoundComponent {
 	constructor () { }
 
 
-	public bonusPromiseMethod1 (): Promise<string> {
+	public bonusPromiseMethod1 ( name: string ): Promise<string> {
 		return new Promise(
 			( resolve, reject ) => {
 				setTimeout( () => {
@@ -32,10 +32,10 @@ export class BonusRoundComponent {
 		);
 	}
 
-	public bonusPromiseMethod2 (): void {
+	public bonusPromiseMethod2 ( name: string ): void {
 		this.welcomeMessage = 'loading..';
 
-		this.bonusPromiseMethod1()
+		this.bonusPromiseMethod1( name )
 			.then(
 				( fullName: string ) => {
 					setTimeout( () => {
